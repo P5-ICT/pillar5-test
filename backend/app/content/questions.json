@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "prompt": "Which one is a string?",
+    "code": null,
+    "options": [
+      "42",
+      "3.14",
+      "True",
+      "\"Python\""
+    ],
+    "answer": 3
+  },
+  {
+    "id": 2,
+    "prompt": "What does this code print?",
+    "code": "print(\"Hello\")",
+    "options": [
+      "print Hello",
+      "Hello",
+      "\"Hello\"",
+      "Nothing"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 3,
+    "prompt": "What does this code print?",
+    "code": "name = \"Sam\"\nprint(\"Hi \" + name)",
+    "options": [
+      "Hi name",
+      "Hi + Sam",
+      "Hi Sam",
+      "Error"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 4,
+    "prompt": "Which keyword do you use to create a function in Python?",
+    "code": null,
+    "options": [
+      "def",
+      "func",
+      "function",
+      "define"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 5,
+    "prompt": "What does this print?",
+    "code": "print(len(\"Pillar\"))",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "Error"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 6,
+    "prompt": "What does this print?",
+    "code": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(fruits[-1])",
+    "options": [
+      "apple",
+      "banana",
+      "cherry",
+      "Error"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 7,
+    "prompt": "What does type(3.0) show?",
+    "code": null,
+    "options": [
+      "<class 'int'>",
+      "<class 'float'>",
+      "<class 'str'>",
+      "<class 'decimal'>"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 8,
+    "prompt": "What does this print?",
+    "code": "for i in range(1, 4):\n    print(i * 2)",
+    "options": [
+      "1 2 3",
+      "2 4 6",
+      "2 4 6 8",
+      "0 2 4"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 9,
+    "prompt": "What does this print?",
+    "code": "x = \"5\"\ny = 3\nprint(x * y)",
+    "options": [
+      "15",
+      "555",
+      "Error",
+      "8"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 10,
+    "prompt": "What does this print?",
+    "code": "age = 17\nif age >= 18:\n    print(\"Adult\")\nelif age >= 13:\n    print(\"Teen\")\nelse:\n    print(\"Child\")",
+    "options": [
+      "Adult",
+      "Teen",
+      "Child",
+      "Error"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 11,
+    "prompt": "What does this print?",
+    "code": "x = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+    "options": [
+      "[1, 2, 3]",
+      "[1, 2, 3, 4]",
+      "[4]",
+      "Error"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 12,
+    "prompt": "What does type({}) show?",
+    "code": null,
+    "options": [
+      "<class 'set'>",
+      "<class 'list'>",
+      "<class 'dict'>",
+      "<class 'tuple'>"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 13,
+    "prompt": "What does this print?",
+    "code": "s = \"python\"\nprint(s[1:4])",
+    "options": [
+      "pyt",
+      "yth",
+      "ytho",
+      "tho"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 14,
+    "prompt": "What does this print?",
+    "code": "print(10 // 3, 10 % 3)",
+    "options": [
+      "3.33 1",
+      "3 1",
+      "1 3",
+      "3 0"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 15,
+    "prompt": "What does this print?",
+    "code": "def add(a, b=2):\n    return a + b\n\nprint(add(5))",
+    "options": [
+      "5",
+      "2",
+      "7",
+      "Error, because b is missing"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 16,
+    "prompt": "What does this print?",
+    "code": "nums = [1, 2, 3, 4, 5]\nprint([n * n for n in nums if n % 2 == 0])",
+    "options": [
+      "[1, 9, 25]",
+      "[4, 16]",
+      "[2, 4]",
+      "[1, 4, 9, 16, 25]"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 17,
+    "prompt": "What does this print?",
+    "code": "d = {\"a\": 1, \"b\": 2}\nprint(d.get(\"c\", 0))",
+    "options": [
+      "None",
+      "Error",
+      "0",
+      "\"c\""
+    ],
+    "answer": 2
+  },
+  {
+    "id": 18,
+    "prompt": "What happens when this code runs?",
+    "code": "t = (1, 2, 3)\nt[0] = 10",
+    "options": [
+      "t becomes (10, 2, 3)",
+      "t becomes (10, 1, 2, 3)",
+      "Nothing happens",
+      "TypeError, because tuples cannot be changed"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 19,
+    "prompt": "What does this print?",
+    "code": "x = 5\n\ndef f():\n    x = 10\n\nf()\nprint(x)",
+    "options": [
+      "5",
+      "10",
+      "Error",
+      "None"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 20,
+    "prompt": "What does this print?",
+    "code": "try:\n    int(\"abc\")\nexcept ValueError:\n    print(\"A\")\nfinally:\n    print(\"B\")",
+    "options": [
+      "A",
+      "B",
+      "A then B",
+      "Error"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 21,
+    "prompt": "What does this print?",
+    "code": "print(bool([]), bool(\"0\"))",
+    "options": [
+      "False False",
+      "True True",
+      "True False",
+      "False True"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 22,
+    "prompt": "What does len({1, 2, 2, 3, 3, 3}) return?",
+    "code": null,
+    "options": [
+      "6",
+      "3",
+      "1",
+      "2"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 23,
+    "prompt": "What does this print?",
+    "code": "a = [3, 1, 2]\nb = sorted(a)\nprint(a, b)",
+    "options": [
+      "[1, 2, 3] [1, 2, 3]",
+      "[3, 1, 2] [3, 1, 2]",
+      "[3, 1, 2] [1, 2, 3]",
+      "[1, 2, 3] [3, 1, 2]"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 24,
+    "prompt": "What does this print?",
+    "code": "class Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        return self.name + \" says woof\"\n\nd = Dog(\"Rex\")\nprint(d.speak())",
+    "options": [
+      "Rex says woof",
+      "name says woof",
+      "Dog says woof",
+      "Error, because self is missing"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 25,
+    "prompt": "What does this print?",
+    "code": "print(\"a,b,c\".split(\",\"))",
+    "options": [
+      "a b c",
+      "\"a,b,c\"",
+      "['a,b,c']",
+      "['a', 'b', 'c']"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 26,
+    "prompt": "What does this print?",
+    "code": "i = 0\nwhile i < 3:\n    i += 1\n    if i == 2:\n        continue\n    print(i)",
+    "options": [
+      "1 2 3",
+      "1 3",
+      "0 1",
+      "2"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 27,
+    "prompt": "What does this print?",
+    "code": "print(list(range(2, 10, 3)))",
+    "options": [
+      "[2, 5, 8]",
+      "[2, 5, 8, 11]",
+      "[2, 3, 4]",
+      "[3, 6, 9]"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 28,
+    "prompt": "Which line opens a file so that you can write to it and erase what was in it before?",
+    "code": null,
+    "options": [
+      "open(\"f.txt\", \"r\")",
+      "open(\"f.txt\", \"w\")",
+      "open(\"f.txt\", \"a\")",
+      "open(\"f.txt\", \"read\")"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 29,
+    "prompt": "What does this print?",
+    "code": "def add_item(item, box=[]):\n    box.append(item)\n    return box\n\nprint(add_item(1))\nprint(add_item(2))",
+    "options": [
+      "[1] then [2]",
+      "[1] then [1, 2]",
+      "[1, 2] then [1, 2]",
+      "Error"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 30,
+    "prompt": "What does this print?",
+    "code": "a = [1, 2]\nb = [1, 2]\nprint(a == b, a is b)",
+    "options": [
+      "True True",
+      "False False",
+      "False True",
+      "True False"
+    ],
+    "answer": 3
+  }
+]

@@ -1,0 +1,41 @@
+# Render blueprint: one database, one Python API, one Next.js site.
+databases:
+  - name: pillar5-db
+    plan: basic-256mb
+    databaseName: pillar5
+    user: pillar5
+
+services:
+  - type: web
+    name: pillar5-api
+    runtime: python
+    rootDir: backend
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -k uvicorn.workers.UvicornWorker -w 4 --preload -b 0.0.0.0:$PORT app.main:app
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: pillar5-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        sync: false   # you type this in the Render dashboard
+      - key: TEST_DURATION_SECONDS
+        value: "7200"
+
+  - type: web
+    name: pillar5-web
+    runtime: node
+    rootDir: frontend
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: BACKEND_HOSTPORT
+        fromService:
+          type: web
+          name: pillar5-api
+          property: hostport

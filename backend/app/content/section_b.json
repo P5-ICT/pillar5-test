@@ -1,0 +1,15 @@
+{
+  "title": "Build a Help Desk website",
+  "marks": 30,
+  "plan_minutes": 90,
+  "paragraphs": [
+    "You have been asked to build a small website called **Help Desk** for a company that wants to collect problems from its staff. In this section you will show that you can build a page that reads what a person types, saves it, and answers with something useful.",
+    "The home page must have a heading and a short welcome message. Under it there must be a form with three inputs. The first is a text box where the person types their name. The second is a dropdown where they choose the type of problem, with at least three options such as Internet, Computer and Software. The third is a larger text box where they describe the problem. The form must end with a Submit button.",
+    "When the person clicks Submit, your website must read the three things they typed and show a reply page. The reply must greet the person by name, for example “Hi Thabo, how can we help you?”, and then repeat back the problem type and the description so they can see what was sent. The reply must also give the request a ticket number. The first request is Ticket 1, the next is Ticket 2, and so on, going up by one each time. The reply must also include a short message that depends on the problem type. For example, an Internet problem could say “Please restart your router”, while a Computer problem could say “A technician will check your computer.”",
+    "Every request must be saved so that it is not lost when the person moves to another page. You may keep the requests in a Python list, a JSON file or a text file. Create a second page at the address `/requests` that shows all saved requests in a table with the ticket number, name, problem type and description. The table must update by itself when new requests are sent, without you having to change any code.",
+    "Your website must also check what the person typed. If the name or the description is empty, show a clear error message and do not save the request. If the description is shorter than 10 characters, show an error message as well.",
+    "Python with Flask is the recommended choice, because Section A tests Python. If you are more comfortable with HTML and JavaScript, you may use those instead. You may search online for help, but you must be able to explain every part of your code when asked. Use clear names for your variables, and use at least one function so you do not repeat the same code.",
+    "**Bonus, up to 4 extra marks:** add a search box on the `/requests` page that filters by name or type (2 marks), and add a button that deletes a request (2 marks)."
+  ],
+  "marking_line": "How Section B is marked: the form 8, reading the input and showing the reply 8, saving the data and the /requests page 6, the empty and length checks 4, neat code and your explanation of it 4."
+}
