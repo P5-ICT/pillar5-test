@@ -308,7 +308,7 @@ export default function Home() {
           <Interlude
             questions={questions}
             answers={answers}
-            planMinutes={attempt.section_b?.plan_minutes ?? 90}
+            planMinutes={attempt.section_b?.plan_minutes ?? 80}
             onStartB={() => {
               setStep("B");
               window.scrollTo(0, 0);

@@ -90,8 +90,9 @@ export default function AdminPage() {
     if (!token) return;
     const raw = drafts[row.id] ?? (row.b_mark === null ? "" : String(row.b_mark));
     const value = Number(raw);
-    if (raw.trim() === "" || !Number.isInteger(value) || value < 0 || value > 30) {
-      setRowError((r) => ({ ...r, [row.id]: "Enter a whole number from 0 to 30." }));
+    const max = (data?.summary.section_b_total ?? 30) + (data?.summary.section_b_bonus ?? 0);
+    if (raw.trim() === "" || !Number.isInteger(value) || value < 0 || value > max) {
+      setRowError((r) => ({ ...r, [row.id]: `Enter a whole number from 0 to ${max}.` }));
       return;
     }
     try {
@@ -162,6 +163,7 @@ export default function AdminPage() {
 
   const summary = data?.summary;
   const bTotal = summary?.section_b_total ?? 30;
+  const bMax = bTotal + (summary?.section_b_bonus ?? 0);
 
   return (
     <>
@@ -225,11 +227,11 @@ export default function AdminPage() {
                         {finished ? (
                           <div className="markbox">
                             <input
-                              type="number" min={0} max={bTotal} step={1} value={value}
+                              type="number" min={0} max={bMax} step={1} value={value}
                               aria-label={`Section B mark for ${row.first_name} ${row.surname}`}
                               onChange={(e) => setDrafts((d) => ({ ...d, [row.id]: e.target.value }))}
                             />
-                            <span className="muted">/ {bTotal}</span>
+                            <span className="muted">/ {bTotal}{bMax > bTotal && ` + ${bMax - bTotal} bonus`}</span>
                             <button className="btn small" onClick={() => saveMark(row)}>Save</button>
                           </div>
                         ) : (

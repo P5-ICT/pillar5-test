@@ -8,7 +8,7 @@ from fastapi.responses import Response
 from sqlalchemy import delete, func, select
 from sqlalchemy.orm import Session
 
-from .config import SECTION_A_MARKS, SECTION_B_MARKS
+from .config import SECTION_A_MARKS, SECTION_B_BONUS, SECTION_B_MARKS
 from .db import get_db, iso, utcnow
 from .models import Answer, Attempt, UploadedFile
 from .schemas import AdminLoginIn, MarkIn
@@ -76,6 +76,7 @@ def list_attempts(db: Session = Depends(get_db)):
         "submitted": sum(r["status"] != "in_progress" for r in rows),
         "section_a_total": SECTION_A_MARKS,
         "section_b_total": SECTION_B_MARKS,
+        "section_b_bonus": SECTION_B_BONUS,
     }
     return {"summary": summary, "attempts": rows}
 

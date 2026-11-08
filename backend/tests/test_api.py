@@ -164,7 +164,8 @@ def test_admin_can_read_code_and_mark(client, student, admin):
     detail = client.get(f"/api/admin/attempts/{state['id']}", headers=admin).json()
     assert detail["files"][0]["content"] == "print('help desk')\n"
 
-    assert client.put(f"/api/admin/attempts/{state['id']}/mark", json={"b_mark": 31}, headers=admin).status_code == 422
+    assert client.put(f"/api/admin/attempts/{state['id']}/mark", json={"b_mark": 35}, headers=admin).status_code == 422
+    assert client.put(f"/api/admin/attempts/{state['id']}/mark", json={"b_mark": 34}, headers=admin).status_code == 200
     assert client.put(f"/api/admin/attempts/{state['id']}/mark", json={"b_mark": 24}, headers=admin).status_code == 200
 
     rows = client.get("/api/admin/attempts", headers=admin).json()["attempts"]

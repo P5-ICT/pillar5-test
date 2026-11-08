@@ -21,7 +21,7 @@ export function Interlude({ questions, answers, planMinutes, onStartB, onReview 
         {missing.length > 0 && ` Not answered yet: ${missing.join(", ")}.`}
       </p>
       <p>
-        Section B is the Help Desk website task. You will read the task, build the website on your computer, and attach
+        Section B is the Asset Loan Tracker website task. You will read the task, build the website on your computer, and attach
         your code files at the end. Plan about {planMinutes} minutes. Your countdown keeps running.
       </p>
       <p className="muted">You can still go back to Section A before you submit the test.</p>

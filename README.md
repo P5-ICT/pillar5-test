@@ -3,7 +3,7 @@
 A Python (FastAPI) back end and a Next.js front end for the entry test.
 
 * Section A: 30 multiple choice questions, one at a time, marked on the server.
-* Section B: Help Desk website task. Students attach their source files.
+* Section B: Asset Loan Tracker website task (30 marks plus up to 4 bonus). Students attach their source files or a zip.
 * Timer: 2 hours, kept by the server, so refreshing or changing device does not help anyone.
 * Facilitator page at `/admin`: see everyone, read their code, enter the Section B mark, download a CSV.
 * Students never receive the correct answers.

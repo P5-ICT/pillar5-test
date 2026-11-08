@@ -39,19 +39,20 @@ export function Brief({ first, config, starting, error, onStart, onBack }: Props
             ones. Choose one answer, then press Next. You can go back to any question and change your answer before you
             submit. Every question is worth 1 mark. Section A is marked the moment you submit, and you will see which
             questions you got right and which you got wrong. When you reach the last question, the test tells you that
-            you are moving to Section B. Aim to finish Section A in about 30 minutes.
+            you are moving to Section B. Aim to finish Section A in about 40 minutes.
           </p>
         </div>
 
         <div className="blk">
           <div className="eyebrow">Section B</div>
-          <h3>Build a Help Desk website</h3>
+          <h3>Build an Asset Loan Tracker website</h3>
           <p>
-            You will read a task and build a small website called Help Desk on your own computer. The website must read
-            what a person types, save it and reply. Flask is recommended, or you can use HTML and JavaScript. When your
-            website works, come back to this page and attach all your code files with the Browse button at the bottom of
-            the test. Your facilitator marks Section B later, so your result will show Needs marking for this section.
-            Plan about 90 minutes.
+            You will read a task and build a small website called Asset Loan Tracker on your own computer. Staff use it
+            to borrow equipment: the website must read and check a form, save every loan to a file, and show all loans
+            on a second page. Flask is recommended. When your website works, come back to this page and attach all your
+            code files, or one zip of your project, with the Browse button at the bottom of the test. Your facilitator
+            marks Section B later, so your result will show Needs marking for this section. There are up to 4 bonus
+            marks. Plan about 80 minutes.
           </p>
         </div>
 

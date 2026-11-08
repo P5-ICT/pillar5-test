@@ -1,5 +1,7 @@
 from pydantic import BaseModel, Field, field_validator
 
+from .config import SECTION_B_BONUS, SECTION_B_MARKS
+
 
 class StartIn(BaseModel):
     first_name: str = Field(min_length=1, max_length=60)
@@ -24,4 +26,4 @@ class AdminLoginIn(BaseModel):
 
 
 class MarkIn(BaseModel):
-    b_mark: int = Field(ge=0, le=30)
+    b_mark: int = Field(ge=0, le=SECTION_B_MARKS + SECTION_B_BONUS)

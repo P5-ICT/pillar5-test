@@ -74,6 +74,7 @@ export type AdminList = {
     submitted: number;
     section_a_total: number;
     section_b_total: number;
+    section_b_bonus: number;
   };
   attempts: AdminRow[];
 };

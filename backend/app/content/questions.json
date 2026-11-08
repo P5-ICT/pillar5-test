@@ -1,361 +1,361 @@
 [
   {
     "id": 1,
-    "prompt": "Which one is a string?",
-    "code": null,
+    "prompt": "What does this print?",
+    "code": "s = \"abcdefgh\"\nprint(s[::-2])",
     "options": [
-      "42",
-      "3.14",
-      "True",
-      "\"Python\""
-    ],
-    "answer": 3
-  },
-  {
-    "id": 2,
-    "prompt": "What does this code print?",
-    "code": "print(\"Hello\")",
-    "options": [
-      "print Hello",
-      "Hello",
-      "\"Hello\"",
-      "Nothing"
-    ],
-    "answer": 1
-  },
-  {
-    "id": 3,
-    "prompt": "What does this code print?",
-    "code": "name = \"Sam\"\nprint(\"Hi \" + name)",
-    "options": [
-      "Hi name",
-      "Hi + Sam",
-      "Hi Sam",
-      "Error"
+      "aceg",
+      "hgfe",
+      "hfdb",
+      "bdfh"
     ],
     "answer": 2
   },
   {
-    "id": 4,
-    "prompt": "Which keyword do you use to create a function in Python?",
-    "code": null,
+    "id": 2,
+    "prompt": "What does this print?",
+    "code": "print([x + y for x in [1, 2] for y in [10, 20]])",
     "options": [
-      "def",
-      "func",
-      "function",
-      "define"
+      "[11, 21, 12, 22]",
+      "[11, 22]",
+      "[11, 12, 21, 22]",
+      "[21, 22, 11, 12]"
     ],
     "answer": 0
   },
   {
+    "id": 3,
+    "prompt": "What does this print?",
+    "code": "funcs = [lambda: i for i in range(3)]\nprint([f() for f in funcs])",
+    "options": [
+      "[0, 1, 2]",
+      "[3, 3, 3]",
+      "Error",
+      "[2, 2, 2]"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 4,
+    "prompt": "What does this print?",
+    "code": "def gen():\n    yield 1\n    yield 2\n\ng = gen()\nprint(next(g), next(g), list(g))",
+    "options": [
+      "1 2 [1, 2]",
+      "1 2 []",
+      "1 2 [3]",
+      "Error"
+    ],
+    "answer": 1
+  },
+  {
     "id": 5,
     "prompt": "What does this print?",
-    "code": "print(len(\"Pillar\"))",
+    "code": "def f(*args, **kwargs):\n    return len(args), len(kwargs)\n\nprint(f(1, 2, a=3))",
     "options": [
-      "5",
-      "6",
-      "7",
-      "Error"
+      "(3, 1)",
+      "(2, 1)",
+      "(2, 0)",
+      "(1, 2)"
     ],
     "answer": 1
   },
   {
     "id": 6,
     "prompt": "What does this print?",
-    "code": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(fruits[-1])",
+    "code": "def shout(fn):\n    def wrapper(x):\n        return fn(x).upper() + \"!\"\n    return wrapper\n\n@shout\ndef greet(name):\n    return \"hi \" + name\n\nprint(greet(\"sam\"))",
     "options": [
-      "apple",
-      "banana",
-      "cherry",
-      "Error"
+      "hi sam",
+      "Hi Sam!",
+      "Error",
+      "HI SAM!"
     ],
-    "answer": 2
+    "answer": 3
   },
   {
     "id": 7,
-    "prompt": "What does type(3.0) show?",
-    "code": null,
+    "prompt": "What does this print?",
+    "code": "import copy\na = [[1, 2], [3]]\nb = copy.copy(a)\nb[0].append(99)\nprint(a)",
     "options": [
-      "<class 'int'>",
-      "<class 'float'>",
-      "<class 'str'>",
-      "<class 'decimal'>"
+      "[[1, 2, 99], [3]]",
+      "[[1, 2], [3]]",
+      "[[1, 2, 99], [3, 99]]",
+      "Error"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
     "id": 8,
     "prompt": "What does this print?",
-    "code": "for i in range(1, 4):\n    print(i * 2)",
+    "code": "print({k: v for k, v in zip(\"abc\", range(3)) if v > 0})",
     "options": [
-      "1 2 3",
-      "2 4 6",
-      "2 4 6 8",
-      "0 2 4"
+      "{'a': 0, 'b': 1, 'c': 2}",
+      "{'a': 0}",
+      "{'b': 1, 'c': 2}",
+      "{'b': 2, 'c': 3}"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
     "id": 9,
     "prompt": "What does this print?",
-    "code": "x = \"5\"\ny = 3\nprint(x * y)",
+    "code": "words = [\"pear\", \"fig\", \"banana\", \"kiwi\"]\nprint(sorted(words, key=len))",
     "options": [
-      "15",
-      "555",
-      "Error",
-      "8"
+      "['banana', 'fig', 'kiwi', 'pear']",
+      "['fig', 'kiwi', 'pear', 'banana']",
+      "['fig', 'pear', 'kiwi', 'banana']",
+      "['banana', 'pear', 'kiwi', 'fig']"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
     "id": 10,
     "prompt": "What does this print?",
-    "code": "age = 17\nif age >= 18:\n    print(\"Adult\")\nelif age >= 13:\n    print(\"Teen\")\nelse:\n    print(\"Child\")",
+    "code": "def test():\n    try:\n        return \"try\"\n    finally:\n        print(\"finally\", end=\" \")\n\nprint(test())",
     "options": [
-      "Adult",
-      "Teen",
-      "Child",
-      "Error"
+      "finally try",
+      "try",
+      "try finally",
+      "finally"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
     "id": 11,
     "prompt": "What does this print?",
-    "code": "x = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+    "code": "class A:\n    def hello(self):\n        return \"A\"\n\nclass B(A):\n    def hello(self):\n        return super().hello() + \"B\"\n\nclass C(B):\n    def hello(self):\n        return super().hello() + \"C\"\n\nprint(C().hello())",
     "options": [
-      "[1, 2, 3]",
-      "[1, 2, 3, 4]",
-      "[4]",
-      "Error"
+      "CBA",
+      "ABC",
+      "C",
+      "AC"
     ],
     "answer": 1
   },
   {
     "id": 12,
-    "prompt": "What does type({}) show?",
+    "prompt": "In Flask, which line makes a route accept form data sent with POST?",
     "code": null,
     "options": [
-      "<class 'set'>",
-      "<class 'list'>",
-      "<class 'dict'>",
-      "<class 'tuple'>"
+      "@app.route(\"/send\", method=\"POST\")",
+      "@app.route(\"/send\", form=True)",
+      "@app.post_only(\"/send\")",
+      "@app.route(\"/send\", methods=[\"POST\"])"
     ],
-    "answer": 2
+    "answer": 3
   },
   {
     "id": 13,
     "prompt": "What does this print?",
-    "code": "s = \"python\"\nprint(s[1:4])",
+    "code": "class Counter:\n    count = 0\n    def __init__(self):\n        Counter.count += 1\n\na = Counter()\nb = Counter()\nprint(a.count, b.count, Counter.count)",
     "options": [
-      "pyt",
-      "yth",
-      "ytho",
-      "tho"
+      "1 1 2",
+      "1 2 2",
+      "0 0 2",
+      "2 2 2"
     ],
-    "answer": 1
+    "answer": 3
   },
   {
     "id": 14,
     "prompt": "What does this print?",
-    "code": "print(10 // 3, 10 % 3)",
+    "code": "print(any([0, \"\", None]), all([]))",
     "options": [
-      "3.33 1",
-      "3 1",
-      "1 3",
-      "3 0"
+      "False False",
+      "False True",
+      "True True",
+      "True False"
     ],
     "answer": 1
   },
   {
     "id": 15,
     "prompt": "What does this print?",
-    "code": "def add(a, b=2):\n    return a + b\n\nprint(add(5))",
+    "code": "def outer():\n    n = 0\n    def inner():\n        nonlocal n\n        n += 1\n        return n\n    inner()\n    inner()\n    return n\n\nprint(outer())",
     "options": [
-      "5",
       "2",
-      "7",
-      "Error, because b is missing"
+      "0",
+      "1",
+      "Error"
     ],
-    "answer": 2
+    "answer": 0
   },
   {
     "id": 16,
     "prompt": "What does this print?",
-    "code": "nums = [1, 2, 3, 4, 5]\nprint([n * n for n in nums if n % 2 == 0])",
+    "code": "print(list(map(lambda x: x * 2, filter(lambda x: x % 2, range(6)))))",
     "options": [
-      "[1, 9, 25]",
-      "[4, 16]",
-      "[2, 4]",
-      "[1, 4, 9, 16, 25]"
-    ],
-    "answer": 1
-  },
-  {
-    "id": 17,
-    "prompt": "What does this print?",
-    "code": "d = {\"a\": 1, \"b\": 2}\nprint(d.get(\"c\", 0))",
-    "options": [
-      "None",
-      "Error",
-      "0",
-      "\"c\""
+      "[0, 4, 8]",
+      "[2, 4, 6, 8, 10]",
+      "[2, 6, 10]",
+      "[1, 3, 5]"
     ],
     "answer": 2
   },
   {
-    "id": 18,
-    "prompt": "What happens when this code runs?",
-    "code": "t = (1, 2, 3)\nt[0] = 10",
+    "id": 17,
+    "prompt": "What does this print?",
+    "code": "a = {1, 2, 3, 4}\nb = {3, 4, 5}\nprint(sorted(a ^ b))",
     "options": [
-      "t becomes (10, 2, 3)",
-      "t becomes (10, 1, 2, 3)",
-      "Nothing happens",
-      "TypeError, because tuples cannot be changed"
+      "[1, 2, 5]",
+      "[3, 4]",
+      "[1, 2, 3, 4, 5]",
+      "[1, 2]"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 18,
+    "prompt": "What does this print?",
+    "code": "price = 3.14159\nprint(f\"{price:.2f}|{42:05d}\")",
+    "options": [
+      "3.14|42",
+      "3.1|00042",
+      "3.14159|00042",
+      "3.14|00042"
     ],
     "answer": 3
   },
   {
     "id": 19,
-    "prompt": "What does this print?",
-    "code": "x = 5\n\ndef f():\n    x = 10\n\nf()\nprint(x)",
+    "prompt": "In Flask, which line reads the value of a form input named \"email\" that was sent with POST?",
+    "code": null,
     "options": [
-      "5",
-      "10",
-      "Error",
-      "None"
+      "request.args.email",
+      "request.get(\"email\")",
+      "request.form[\"email\"]",
+      "form.email"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
     "id": 20,
     "prompt": "What does this print?",
-    "code": "try:\n    int(\"abc\")\nexcept ValueError:\n    print(\"A\")\nfinally:\n    print(\"B\")",
+    "code": "try:\n    d = {\"a\": 1}\n    print(d[\"b\"])\nexcept (KeyError, IndexError) as e:\n    print(type(e).__name__)",
     "options": [
-      "A",
-      "B",
-      "A then B",
+      "IndexError",
+      "KeyError",
+      "ValueError",
+      "Nothing is printed"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 21,
+    "prompt": "What does this print?",
+    "code": "nums = [1, 2, 3, 4, 5]\nnums[1:3] = [9]\nprint(nums)",
+    "options": [
+      "[1, 9, 3, 4, 5]",
+      "[1, 9, 4, 5]",
+      "[1, 9, 9, 4, 5]",
+      "[9, 4, 5]"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 22,
+    "prompt": "What does this print?",
+    "code": "a, *b, c = [1, 2, 3, 4, 5]\nprint(a, b, c)",
+    "options": [
+      "1 [2] 5",
+      "1 (2, 3, 4) 5",
+      "1 [2, 3, 4] 5",
       "Error"
     ],
     "answer": 2
   },
   {
-    "id": 21,
-    "prompt": "What does this print?",
-    "code": "print(bool([]), bool(\"0\"))",
-    "options": [
-      "False False",
-      "True True",
-      "True False",
-      "False True"
-    ],
-    "answer": 3
-  },
-  {
-    "id": 22,
-    "prompt": "What does len({1, 2, 2, 3, 3, 3}) return?",
-    "code": null,
-    "options": [
-      "6",
-      "3",
-      "1",
-      "2"
-    ],
-    "answer": 1
-  },
-  {
     "id": 23,
     "prompt": "What does this print?",
-    "code": "a = [3, 1, 2]\nb = sorted(a)\nprint(a, b)",
+    "code": "counts = {}\nfor ch in \"banana\":\n    counts[ch] = counts.get(ch, 0) + 1\nprint(counts)",
     "options": [
-      "[1, 2, 3] [1, 2, 3]",
-      "[3, 1, 2] [3, 1, 2]",
-      "[3, 1, 2] [1, 2, 3]",
-      "[1, 2, 3] [3, 1, 2]"
-    ],
-    "answer": 2
-  },
-  {
-    "id": 24,
-    "prompt": "What does this print?",
-    "code": "class Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        return self.name + \" says woof\"\n\nd = Dog(\"Rex\")\nprint(d.speak())",
-    "options": [
-      "Rex says woof",
-      "name says woof",
-      "Dog says woof",
-      "Error, because self is missing"
+      "{'b': 1, 'a': 3, 'n': 2}",
+      "{'a': 3, 'b': 1, 'n': 2}",
+      "{'b': 1, 'a': 1, 'n': 1}",
+      "Error"
     ],
     "answer": 0
   },
   {
+    "id": 24,
+    "prompt": "What does this print?",
+    "code": "def f(n):\n    if n <= 1:\n        return n\n    return f(n - 1) + f(n - 2)\n\nprint(f(7))",
+    "options": [
+      "8",
+      "21",
+      "5",
+      "13"
+    ],
+    "answer": 3
+  },
+  {
     "id": 25,
     "prompt": "What does this print?",
-    "code": "print(\"a,b,c\".split(\",\"))",
+    "code": "print(\"  Hello, World  \".strip().lower().replace(\"o\", \"0\"))",
     "options": [
-      "a b c",
-      "\"a,b,c\"",
-      "['a,b,c']",
-      "['a', 'b', 'c']"
+      "hell0, world",
+      "Hell0, W0rld",
+      "hello, world",
+      "hell0, w0rld"
     ],
     "answer": 3
   },
   {
     "id": 26,
     "prompt": "What does this print?",
-    "code": "i = 0\nwhile i < 3:\n    i += 1\n    if i == 2:\n        continue\n    print(i)",
+    "code": "people = [(\"Ann\", 30), (\"Bob\", 25), (\"Cy\", 30)]\nprint(max(people, key=lambda p: p[1])[0])",
     "options": [
-      "1 2 3",
-      "1 3",
-      "0 1",
-      "2"
-    ],
-    "answer": 1
-  },
-  {
-    "id": 27,
-    "prompt": "What does this print?",
-    "code": "print(list(range(2, 10, 3)))",
-    "options": [
-      "[2, 5, 8]",
-      "[2, 5, 8, 11]",
-      "[2, 3, 4]",
-      "[3, 6, 9]"
+      "Ann",
+      "Cy",
+      "30",
+      "Bob"
     ],
     "answer": 0
   },
   {
+    "id": 27,
+    "prompt": "What does this print?",
+    "code": "print(0 or \"\" or \"x\" and \"y\")",
+    "options": [
+      "x",
+      "True",
+      "y",
+      "0"
+    ],
+    "answer": 2
+  },
+  {
     "id": 28,
-    "prompt": "Which line opens a file so that you can write to it and erase what was in it before?",
+    "prompt": "Which HTTP status code is the best choice when a user sends invalid form data?",
     "code": null,
     "options": [
-      "open(\"f.txt\", \"r\")",
-      "open(\"f.txt\", \"w\")",
-      "open(\"f.txt\", \"a\")",
-      "open(\"f.txt\", \"read\")"
+      "200",
+      "400",
+      "404",
+      "500"
     ],
     "answer": 1
   },
   {
     "id": 29,
     "prompt": "What does this print?",
-    "code": "def add_item(item, box=[]):\n    box.append(item)\n    return box\n\nprint(add_item(1))\nprint(add_item(2))",
+    "code": "import json\ndata = json.loads('{\"name\": \"Thabo\", \"tags\": [\"a\", \"b\"]}')\nprint(data[\"tags\"][1], type(data).__name__)",
     "options": [
-      "[1] then [2]",
-      "[1] then [1, 2]",
-      "[1, 2] then [1, 2]",
-      "Error"
+      "b dict",
+      "a dict",
+      "b list",
+      "b str"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
     "id": 30,
     "prompt": "What does this print?",
-    "code": "a = [1, 2]\nb = [1, 2]\nprint(a == b, a is b)",
+    "code": "class Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    def __repr__(self):\n        return f\"Point({self.x}, {self.y})\"\n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y\n\nprint(Point(1, 2) == Point(1, 2), [Point(1, 2)])",
     "options": [
-      "True True",
-      "False False",
-      "False True",
-      "True False"
+      "False [Point(1, 2)]",
+      "True [Point]",
+      "Error",
+      "True [Point(1, 2)]"
     ],
     "answer": 3
   }

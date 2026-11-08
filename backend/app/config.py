@@ -24,6 +24,7 @@ GRACE_SECONDS = int(os.getenv("GRACE_SECONDS", "20"))
 CORS_ORIGINS = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
 
 SECTION_B_MARKS = 30
+SECTION_B_BONUS = 4  # extra marks a facilitator may give on top of SECTION_B_MARKS
 MAX_FILES = 20
 MAX_TOTAL_BYTES = 150 * 1024
 # A zip may also hold images and other files we skip, so the zip itself may be bigger.

@@ -43,7 +43,7 @@ export function Results({ attempt }: { attempt: AttemptState }) {
       </section>
 
       <section className="res">
-        <div className="eyebrow">Section B · Help Desk website</div>
+        <div className="eyebrow">Section B · Asset Loan Tracker website</div>
         <p style={{ marginTop: 6 }}>
           {result.b_mark === null ? (
             <span className="pill wait">Needs marking</span>
